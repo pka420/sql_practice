@@ -1,0 +1,7 @@
+-- Question 4
+SELECT STUDENT.*
+FROM STUDENT
+JOIN ADMISSION ON STUDENT.RollNo = ADMISSION.RollNo
+JOIN COURSE ON ADMISSION.CID = COURSE.CID
+WHERE CourseName IN ('computer science', 'chemistry');
+
