@@ -1,23 +1,21 @@
 CREATE TABLE STUDENT (
     RollNo CHAR(6) PRIMARY KEY,
     StudentName VARCHAR(20),
-    CourseID VARCHAR(10),
+    Course VARCHAR(10),
     DOB DATE
 );
 
-CREATE TABLE COURSE (
-    CID CHAR(6) PRIMARY KEY,
-    CourseName VARCHAR(20),
-    CourseType CHAR(8) CHECK (CourseType IN ('Fulltime', 'Parttime')),
-    TeacherInCharge VARCHAR(15),
-    TotalSeats INT UNSIGNED,
-    Duration INT UNSIGNED
+CREATE TABLE SOCIETY (
+    SocID CHAR(6) PRIMARY KEY,
+    SocName VARCHAR(20),
+    MentorName VARCHAR(15),
+    TotalSeats INT UNSIGNED
 );
 
-CREATE TABLE ADMISSION (
+CREATE TABLE ENROLLMENT (
     RollNo CHAR(6),
-    CID CHAR(6),
-    DateOfAdmission DATE,
+    SID CHAR(6),
+    DateOfEnrollment DATE,
     FOREIGN KEY (RollNo) REFERENCES STUDENT(RollNo),
-    FOREIGN KEY (CID) REFERENCES COURSE(CID)
+    FOREIGN KEY (SID) REFERENCES SOCIETY(SocID)
 );

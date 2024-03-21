@@ -1,0 +1,1 @@
+select COUNT(*) from STUDENT where TIMESTAMPDIFF(YEAR, DOB, CURDATE()) > 20;

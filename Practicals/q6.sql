@@ -1,0 +1,3 @@
+SET @N = 12;
+
+SELECT * FROM SOCIETY WHERE TotalSeats > @N;

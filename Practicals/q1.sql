@@ -1,2 +1,4 @@
--- Question 1
-SELECT StudentName FROM STUDENT;
+SELECT DISTINCT s.StudentName
+FROM STUDENT s
+INNER JOIN ENROLLMENT e ON s.RollNo = e.RollNo
+INNER JOIN SOCIETY soc ON e.SID = soc.SocID;

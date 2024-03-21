@@ -1,0 +1,1 @@
+SELECT count(s.SocID) FROM SOCIETY s JOIN ( SELECT SID, COUNT(RollNo) AS NumEnrolled FROM ENROLLMENT GROUP BY SID) AS enrolled_count ON s.SocID = enrolled_count.SID where enrolled_count.NumEnrolled>=5;

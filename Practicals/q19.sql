@@ -1,0 +1,1 @@
+ SELECT s.SocName, s.TotalSeats - enrolled_count.NumEnrolled FROM SOCIETY s JOIN ( SELECT SID, COUNT(RollNo) AS NumEnrolled FROM ENROLLMENT GROUP BY SID) AS enrolled_count ON s.SocID = enrolled_count.SID;

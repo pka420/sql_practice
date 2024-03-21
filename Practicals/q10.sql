@@ -1,0 +1,6 @@
+SELECT soc.SocName
+FROM SOCIETY soc
+JOIN ENROLLMENT e ON soc.SocID = e.SID
+GROUP BY soc.SocID, soc.SocName
+ORDER BY COUNT(e.RollNo) DESC
+LIMIT 1;

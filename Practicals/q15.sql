@@ -1,0 +1,3 @@
+select DISTINCT s.StudentName FROM STUDENT s INNER JOIN ENROLLMENT e ON e.RollNo = s.RollNo;
+
+select DISTINCT s.SocName from SOCIETY s INNER JOIN ENROLLMENT e ON e.SID = s.SocID;
